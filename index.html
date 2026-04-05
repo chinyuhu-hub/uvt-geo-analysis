@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>美伊戰爭拓樸快照 — 2026.03.21</title>
+<title>美伊戰爭拓樸快照 — 2026.04.05 · 戰爭第 36 天</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -19,8 +19,34 @@
     font-weight: 500;
     color: #888;
     letter-spacing: 0.08em;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
   }
+
+  .alert-banner {
+    background: #2a1010;
+    border: 1px solid #ff4a4a44;
+    border-left: 3px solid #ff4a4a;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: #ff9090;
+    line-height: 1.6;
+  }
+  .alert-banner strong { color: #ff6060; }
+
+  .delta-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin-left: 6px;
+    font-weight: 600;
+    vertical-align: middle;
+  }
+  .delta-up { background: #ff3a3a22; color: #ff7070; }
+  .delta-down { background: #3aff7022; color: #5be095; }
+  .delta-same { background: #77777722; color: #888; }
 
   .grid-top {
     display: grid;
@@ -53,7 +79,6 @@
     display: inline-block;
   }
 
-  /* ── 雙方核心驅力 ── */
   .drive-row {
     display: flex;
     align-items: center;
@@ -81,12 +106,11 @@
   .drive-meta {
     font-size: 11px;
     color: #666;
-    width: 64px;
+    width: 80px;
     text-align: right;
     flex-shrink: 0;
   }
 
-  /* ── 戰場時間軸 ── */
   .timeline {
     position: relative;
     padding-left: 24px;
@@ -128,16 +152,16 @@
     margin-top: 4px;
     font-weight: 500;
   }
+  .tl-new {
+    font-size: 9px;
+    font-weight: 700;
+    color: #ff7070;
+    letter-spacing: 0.05em;
+    margin-bottom: 1px;
+  }
 
-  /* ── 雙場碰撞 ── */
   .collision-section {
     margin-bottom: 16px;
-  }
-  .collision-header {
-    font-size: 11px;
-    color: #666;
-    margin-bottom: 12px;
-    letter-spacing: 0.05em;
   }
   .clash-table {
     width: 100%;
@@ -170,7 +194,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* ── 情境卡片 ── */
   .scenario-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -191,9 +214,9 @@
     top: 0; left: 0; right: 0;
     height: 3px;
   }
-  .scenario-card.s1::before { background: #e8a44a; }
-  .scenario-card.s2::before { background: #4a8fff; }
-  .scenario-card.s3::before { background: #888; }
+  .scenario-card.s1::before { background: #ff4a4a; }
+  .scenario-card.s2::before { background: #888; }
+  .scenario-card.s3::before { background: #4a8fff; }
 
   .scenario-prob {
     font-size: 11px;
@@ -209,9 +232,9 @@
     border-radius: 8px;
     font-weight: 600;
   }
-  .s1 .prob-badge { background: #e8a44a22; color: #e8a44a; }
-  .s2 .prob-badge { background: #4a8fff22; color: #4a8fff; }
-  .s3 .prob-badge { background: #88888822; color: #aaa; }
+  .s1 .prob-badge { background: #ff4a4a22; color: #ff7070; }
+  .s2 .prob-badge { background: #88888822; color: #aaa; }
+  .s3 .prob-badge { background: #4a8fff22; color: #4a8fff; }
 
   .scenario-name {
     font-size: 13px;
@@ -230,7 +253,6 @@
     line-height: 1.6;
   }
 
-  /* ── 觀測指標 ── */
   .indicators {
     background: #181c24;
     border-radius: 14px;
@@ -256,9 +278,9 @@
     flex-shrink: 0;
     margin-top: 1px;
   }
-  .ind-green { background: #1a3a2a; }
   .ind-red { background: #3a1a1a; }
   .ind-yellow { background: #3a2a10; }
+  .ind-blue { background: #1a2a3a; }
   .indicator-text {
     flex: 1;
     font-size: 12px;
@@ -271,9 +293,6 @@
     letter-spacing: 0.06em;
     margin-bottom: 2px;
   }
-  .ind-green .indicator-label, .ind-green-text { color: #5be095; }
-  .ind-red .indicator-label, .ind-red-text { color: #ff7070; }
-  .ind-yellow .indicator-label, .ind-yellow-text { color: #f0b942; }
 
   .footnote {
     font-size: 11px;
@@ -283,12 +302,21 @@
     letter-spacing: 0.04em;
   }
 
-  .full-width { grid-column: 1 / -1; }
+  .compare-note {
+    font-size: 10.5px;
+    color: #555;
+    font-style: italic;
+    margin-left: 6px;
+  }
 </style>
 </head>
 <body>
 
-<h1 class="title">美伊戰爭拓樸快照 ── 2026.03.21 &nbsp;|&nbsp; 戰爭第 21 天</h1>
+<h1 class="title">美伊戰爭拓樸快照 ── 2026.04.05 &nbsp;|&nbsp; 戰爭第 36 天 &nbsp;|&nbsp; <span style="color:#ff6060">最後通牒倒數 T-24h</span></h1>
+
+<div class="alert-banner">
+  <strong>⚠ 臨界點警告：</strong>川普發出 48 小時最後通牒，要求伊朗於 <strong>4 月 6 日</strong>重新開放霍爾木茲或接受談判框架，否則發動更強力打擊。伊朗已拒絕赴伊斯蘭馬巴德談判，巴基斯坦調停組織宣告死局。當前為開戰以來外交窗口最小的時刻。
+</div>
 
 <!-- Row 1: 雙方核心驅力 + 戰場時間軸 -->
 <div class="grid-top">
@@ -299,23 +327,23 @@
 
     <div class="drive-row">
       <div class="drive-label" style="color:#a0b8ff">#Power.Status（政治宣勝）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:88%;background:linear-gradient(90deg,#4a6fff,#6b9fff)"></div></div>
-      <div class="drive-meta">88% · 15x</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:92%;background:linear-gradient(90deg,#4a6fff,#6b9fff)"></div></div>
+      <div class="drive-meta">92% · 15x <span class="delta-badge delta-up">↑+4</span></div>
+    </div>
+    <div class="drive-row">
+      <div class="drive-label" style="color:#a0b8ff">#Money.Survival（油價/通膨危機）</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:90%;background:linear-gradient(90deg,#ff8c42,#ffb366)"></div></div>
+      <div class="drive-meta">90% · 15x <span class="delta-badge delta-up">↑+18</span></div>
     </div>
     <div class="drive-row">
       <div class="drive-label" style="color:#a0b8ff">#Power.Impact（展示軍力）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:80%;background:linear-gradient(90deg,#4a6fff,#6b9fff)"></div></div>
-      <div class="drive-meta">80% · 10x</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:78%;background:linear-gradient(90deg,#4a6fff,#6b9fff)"></div></div>
+      <div class="drive-meta">78% · 10x <span class="delta-badge delta-down">↓-2</span></div>
     </div>
     <div class="drive-row">
-      <div class="drive-label" style="color:#a0b8ff">#Money.Survival（油價通膨壓力）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:72%;background:linear-gradient(90deg,#ff8c42,#ffb366)"></div></div>
-      <div class="drive-meta">72% · 8x</div>
-    </div>
-    <div class="drive-row">
-      <div class="drive-label" style="color:#a0b8ff">#Wellbeing.Routine（選民耐性）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:55%;background:linear-gradient(90deg,#ff4a4a,#ff7070)"></div></div>
-      <div class="drive-meta">55% · 5x</div>
+      <div class="drive-label" style="color:#a0b8ff">#Wellbeing.Routine（選民耐性耗盡）</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:85%;background:linear-gradient(90deg,#ff4a4a,#ff7070)"></div></div>
+      <div class="drive-meta">85% · 8x <span class="delta-badge delta-up">↑+30</span></div>
     </div>
 
     <div style="height:16px"></div>
@@ -323,188 +351,179 @@
 
     <div class="drive-row">
       <div class="drive-label" style="color:#dda0a0">#Self.Identity（主權不可妥協）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:92%;background:linear-gradient(90deg,#cc3a3a,#ff6060)"></div></div>
-      <div class="drive-meta">92% · 20x</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:96%;background:linear-gradient(90deg,#cc3a3a,#ff6060)"></div></div>
+      <div class="drive-meta">96% · 20x <span class="delta-badge delta-up">↑+4</span></div>
     </div>
     <div class="drive-row">
-      <div class="drive-label" style="color:#dda0a0">#Family.Security（政權存續）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:78%;background:linear-gradient(90deg,#cc3a3a,#ff6060)"></div></div>
-      <div class="drive-meta">78% · 20x</div>
+      <div class="drive-label" style="color:#dda0a0">#Family.Security（政權存續壓力）</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:88%;background:linear-gradient(90deg,#cc3a3a,#ff6060)"></div></div>
+      <div class="drive-meta">88% · 20x <span class="delta-badge delta-up">↑+10</span></div>
     </div>
     <div class="drive-row">
-      <div class="drive-label" style="color:#dda0a0">#Metaphysic.Destiny（宗教使命）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:65%;background:linear-gradient(90deg,#8a4aff,#aa70ff)"></div></div>
-      <div class="drive-meta">65% · 8x</div>
+      <div class="drive-label" style="color:#dda0a0">#Power.Control（霍爾木茲做籌碼）</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:85%;background:linear-gradient(90deg,#aa70ff,#cc90ff)"></div></div>
+      <div class="drive-meta">85% · 12x <span class="delta-badge delta-up">↑+25</span></div>
     </div>
     <div class="drive-row">
-      <div class="drive-label" style="color:#dda0a0">#Money.Survival（霍爾木茲反制）</div>
-      <div class="drive-bar-wrap"><div class="drive-bar" style="width:60%;background:linear-gradient(90deg,#ff8c42,#ffb366)"></div></div>
-      <div class="drive-meta">60% · 5x</div>
+      <div class="drive-label" style="color:#dda0a0">#Metaphysic.Destiny（宗教殉道敘事）</div>
+      <div class="drive-bar-wrap"><div class="drive-bar" style="width:72%;background:linear-gradient(90deg,#8a4aff,#aa70ff)"></div></div>
+      <div class="drive-meta">72% · 8x <span class="delta-badge delta-up">↑+7</span></div>
     </div>
 
-    <div style="margin-top:14px;padding:10px 12px;background:#0f1520;border-radius:8px;font-size:11.5px;color:#999;line-height:1.6">
-      #Self.Identity「主權不容妥協」是存在性紅線，不是談判籌碼。但 #Family.Security 78% 說明政權存續的壓力同樣巨大，這是唯一的彈性空間。
+    <div style="margin-top:14px;padding:10px 12px;background:#1a0f0f;border-radius:8px;font-size:11.5px;color:#cc8888;line-height:1.6;border:1px solid #3a1a1a">
+      <strong style="color:#ff7070">拓樸轉變：</strong>最危險的組合出現了。雙方的核心驅力都在「極化」而非「軟化」——川普的 #Money.Survival 和伊朗的 #Power.Control 同步升高，意味著雙方都更需要對方讓步，但讓步空間在同時收縮。
     </div>
   </div>
 
-  <!-- 戰場時間軸 -->
+  <!-- 戰場時間軸（更新版） -->
   <div class="card">
-    <div class="card-title"><span class="dot" style="background:#e8a44a"></span>戰場時間軸</div>
+    <div class="card-title"><span class="dot" style="background:#e8a44a"></span>戰場時間軸（Vol.2 · 3/21→4/5）</div>
     <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-dot" style="background:#6b9fff"></div>
-        <div class="tl-date">02.28</div>
-        <div class="tl-text">美以聯合空襲伊朗。哈梅內伊在空襲中身亡，數十名高層官員同日殞命。</div>
-        <span class="tl-tag" style="background:#1a2a4a;color:#6b9fff">開戰</span>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot" style="background:#ff6060"></div>
-        <div class="tl-date">03.01</div>
-        <div class="tl-text">伊朗報復式空襲波斯灣美軍基地，並宣布封鎖霍爾木茲海峽。</div>
-        <span class="tl-tag" style="background:#3a1a1a;color:#ff7070">反制</span>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot" style="background:#aa70ff"></div>
-        <div class="tl-date">03.09</div>
-        <div class="tl-text">伊朗選出穆傑塔巴（哈梅內伊次子）為新最高領袖，正當性仍待確立。</div>
-        <span class="tl-tag" style="background:#2a1a3a;color:#aa70ff">政治變局</span>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot" style="background:#ff8c42"></div>
-        <div class="tl-date">03.12</div>
-        <div class="tl-text">國際油價較開戰前暴漲逾 50%。伊朗總統提出停戰條件：承認主權 + 賠款 + 國際保障。</div>
-        <span class="tl-tag" style="background:#3a2010;color:#ff9944">經濟衝擊</span>
-      </div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#5be095"></div>
         <div class="tl-date">03.15</div>
-        <div class="tl-text">伊朗外長：「我們從未要求停火。」同時表示「戰爭必須結束」——矛盾敘事暗示後門保留中。</div>
-        <span class="tl-tag" style="background:#0a2a1a;color:#5be095">外交訊號</span>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot" style="background:#f0b942"></div>
-        <div class="tl-date">03.20</div>
-        <div class="tl-text">川普首次使用「winding down」措辭，拒絕「ceasefire」字眼。授權「午夜之錘行動」打擊核設施。</div>
-        <span class="tl-tag" style="background:#2a1a00;color:#f0b942">關鍵轉折</span>
+        <div class="tl-text">伊朗外長矛盾敘事（「從未要求停火」but「戰爭必須結束」）——後門訊號期。</div>
+        <span class="tl-tag" style="background:#0a2a1a;color:#5be095">舊快照基準</span>
       </div>
       <div class="tl-item">
         <div class="tl-dot" style="background:#888"></div>
-        <div class="tl-date">03.21 <span style="color:#555">— 今天</span></div>
-        <div class="tl-text">戰爭第 21 天。伊拉克什葉派民兵宣布五天暫停襲擊美使館。</div>
-        <span class="tl-tag" style="background:#1a1a1a;color:#888">現在</span>
+        <div class="tl-date">03.21</div>
+        <div class="tl-text">第 21 天快照。伊拉克民兵暫停 5 天。川普「winding down」措辭保留彈性。</div>
+        <span class="tl-tag" style="background:#1a1a1a;color:#888">上次快照</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#aa70ff"></div>
+        <div class="tl-date tl-new">🆕 NEW</div>
+        <div class="tl-date">03.25—04.02</div>
+        <div class="tl-text">美提出 48 小時停火試探（透過第三方）。伊朗拒絕。巴基斯坦調停組織宣告死局，伊朗拒絕赴伊斯蘭馬巴德。外交窗口全數關閉。</div>
+        <span class="tl-tag" style="background:#2a1a3a;color:#aa70ff">外交死局</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#ff6060"></div>
+        <div class="tl-date tl-new">🆕 NEW</div>
+        <div class="tl-date">04.01—04.04</div>
+        <div class="tl-text">伊朗擊落美軍 F-15E（飛行員下落不明）。對科威特、阿聯美軍基地發動無人機報復。Brent 原油突破 $109/桶，美國加侖均價超 $4。</div>
+        <span class="tl-tag" style="background:#3a1a1a;color:#ff7070">軍事升級</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:#ff4a4a"></div>
+        <div class="tl-date tl-new">🆕 HOT</div>
+        <div class="tl-date">04.05 — 今天</div>
+        <div class="tl-text">川普：「重開霍爾木茲或受地獄般打擊」。最後通牒 4/6 到期。伊朗開條件：美軍基地撤出 + 霍爾木茲行政控制權 + 賠款。談判事實上已破裂。</div>
+        <span class="tl-tag" style="background:#2a0808;color:#ff4a4a">⚠ 引爆倒計時</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Row 2: 雙場碰撞 -->
+<!-- Row 2: 雙場碰撞（更新版） -->
 <div class="card collision-section" style="margin-bottom:16px">
-  <div class="card-title"><span class="dot" style="background:#aa70ff"></span>雙場碰撞 — 每個議題，兩個拓樸的反應</div>
+  <div class="card-title"><span class="dot" style="background:#aa70ff"></span>雙場碰撞 ── 談判破局的根本原因</div>
   <table class="clash-table">
     <tr>
-      <th>川普</th>
-      <th style="text-align:center;color:#555;font-size:10px">議題</th>
-      <th>伊朗</th>
+      <th>川普場</th>
+      <th style="text-align:center;color:#555;font-size:10px">衝突軸</th>
+      <th>伊朗場</th>
     </tr>
     <tr class="clash-row">
-      <td class="clash-label" colspan="3">談判框架</td>
+      <td class="clash-label" colspan="3">籌碼非對稱</td>
     </tr>
     <tr class="clash-row">
-      <td>「我是全世界最好的談判者」→ 需要坐上談判桌，但不能看起來是被求著來的</td>
+      <td>軍事行動是手段，「看起來贏」才是目的。最後通牒本質是在製造「我給過機會」的退場敘事</td>
       <td style="text-align:center;font-size:10px;color:#555;width:40px">談</td>
-      <td>談判 = 被迫低頭的羞辱訊號 → #Self.Identity 要求對等尊重才能入場，不能在壓力下談</td>
+      <td>霍爾木茲控制權是伊朗唯一的「存在性籌碼」。要求美軍基地撤出 = 要求美國承認整個中東戰略格局失敗，川普不可能接受</td>
     </tr>
     <tr class="clash-row">
-      <td class="clash-label" colspan="3">退出敘事</td>
+      <td class="clash-label" colspan="3">時間軸錯位</td>
     </tr>
     <tr class="clash-row">
-      <td>需要「任務完成」的勝利敘事，用「winding down」而非「ceasefire」保留面子</td>
-      <td style="text-align:center;font-size:10px;color:#555">退</td>
-      <td>需要「捍衛主權成功」的國內敘事。新領袖穆傑塔巴正當性未定，強硬立場是建立權威的方式</td>
+      <td>美國通膨壓力每天增加（$4+ 加侖），選民痛感累積。川普的耐性窗口比聲稱的短了，需要「快速退出」</td>
+      <td style="text-align:center;font-size:10px;color:#555">時</td>
+      <td>新領袖穆傑塔巴的正當性建立在「不向美國低頭」。越被施壓，越需要強硬以鞏固國內地位。時間讓伊朗的立場更硬而非更軟</td>
     </tr>
     <tr class="clash-row">
-      <td class="clash-label" colspan="3">時間壓力</td>
+      <td class="clash-label" colspan="3">零和框架</td>
     </tr>
     <tr class="clash-row">
-      <td>油價 +50% → 美國通膨壓力 → 選民感受每日累積 → 川普的耐性窗口比聲稱的短</td>
-      <td style="text-align:center;font-size:10px;color:#555">錢</td>
-      <td>霍爾木茲封鎖傷人也傷己（伊朗自身需要石油出口收入）→ 長期封鎖不可持續</td>
+      <td>美方條件：更長停火 + 禁止核活動 + 限制飛彈 + 終止代理戰爭，換取部分制裁解除</td>
+      <td style="text-align:center;font-size:10px;color:#555">條</td>
+      <td>伊朗條件：永久安全保障 + 美軍撤出區域 + 霍爾木茲控制 + 戰爭賠款。雙方條件沒有任何交集</td>
     </tr>
   </table>
 
-  <div style="margin-top:14px;padding:10px 14px;background:#151a25;border-radius:8px;font-size:12px;color:#aaa;line-height:1.6">
-    <span style="color:#f0b942;font-weight:600">核心洞察：</span>雙方都需要一個「讓雙方都能對國內交代的出口」。川普需要「我打贏了才離開」，伊朗需要「我捍衛了主權才停手」。這個敘事工程的空間，是唯一真正的談判場地。
+  <div style="margin-top:14px;padding:10px 14px;background:#1a0f0f;border-radius:8px;font-size:12px;color:#cc8888;line-height:1.6;border-left:3px solid #ff4a4a44">
+    <span style="color:#ff7070;font-weight:600">核心轉變：</span>3/21 快照的「敘事工程空間」已基本消失。雙方的開條件不是在縮小差距，而是在為「為什麼要繼續打」找理由。談判在技術上已失敗，剩下的只是川普最後通牒引爆後的走向。
   </div>
 </div>
 
-<!-- Row 3: 情境卡片 -->
+<!-- Row 3: 情境卡片（重新排序） -->
 <div class="scenario-grid">
   <div class="scenario-card s1">
     <div class="scenario-prob">
-      <span class="prob-badge">B · 45%</span>
+      <span class="prob-badge">A · 50% <span style="font-size:9px;color:#ff4a4a">↑+20</span></span>
     </div>
-    <div class="scenario-name">秘密談判達成<br>雙贏敘事退場</div>
-    <div class="scenario-time">時間窗口：4月中前（3-4週）</div>
+    <div class="scenario-name">最後通牒引爆<br>強力打擊升級</div>
+    <div class="scenario-time">時間窗口：4/6—4/20（2週內）</div>
     <div class="scenario-desc">
-      核設施被炸完、霍爾木茲壓力到頂、油價衝擊回彈到美國國內——三個壓力同步在川普身上。如果後台頻道已在運作，雙方都宣告勝利後，川普「撤軍完成任務」，伊朗「主權未被瓦解」。
+      4/6 期限到期後川普發動「史上最強空袭」，目標包括剩余军事指挥系统及能源基础設施。伊朗以更大規模無人機群反制。霍爾木茲由軍事封鎖升級為戰略對峙，油價衝上 $130+。
       <br><br>
-      <span style="color:#e8a44a">觸發條件：</span>第三方穿梭外交出現（卡達、土耳其、阿曼）＋ 霍爾木茲局部開放訊號
+      <span style="color:#ff7070">升級觸發：</span>4/6 無任何讓步訊號 ｜ 伊朗繼續擊落美軍飛機 ｜ 川普需要國內政治消耗閥
     </div>
   </div>
   <div class="scenario-card s2">
     <div class="scenario-prob">
-      <span class="prob-badge">A · 30%</span>
+      <span class="prob-badge">C · 35% <span style="font-size:9px;color:#aaa">↑+10</span></span>
     </div>
-    <div class="scenario-name">核設施全毀後<br>伊朗自行降級</div>
-    <div class="scenario-time">時間窗口：5月—6月（6-10週）</div>
+    <div class="scenario-name">消耗對峙<br>低烈度長期化</div>
+    <div class="scenario-time">時間窗口：2—6 個月以上</div>
     <div class="scenario-desc">
-      「午夜之錘行動」繼續打到核能力被完全清零。伊朗以「沒什麼好打的」為由降低衝突強度，改以代理人戰爭維持抵抗敘事。戰爭「結束」但地區不穩定持續，霍爾木茲逐步恢復。
+      最後通牒雷聲大雨點小。川普打到一定程度但不全面升級，伊朗繼續控制霍爾木茲但不讓其完全失控。雙方陷入「互相施壓但誰也不想全面開戰」的默契消耗。中俄從中漁利，全球能源供應鏈重組。
       <br><br>
-      <span style="color:#4a8fff">觸發條件：</span>更多核設施被炸新聞＋伊朗代理人活躍度上升
+      <span style="color:#aaa">觸發條件：</span>川普在國內壓力下軟化措辭 ｜ 中俄介入警告 ｜ 美國盟友施壓要求降溫
     </div>
   </div>
   <div class="scenario-card s3">
     <div class="scenario-prob">
-      <span class="prob-badge">C · 25%</span>
+      <span class="prob-badge">B · 15% <span style="font-size:9px;color:#4a8fff">↓-30</span></span>
     </div>
-    <div class="scenario-name">長期僵局<br>全球能源重塑</div>
-    <div class="scenario-time">時間窗口：6個月以上</div>
+    <div class="scenario-name">第三方奇蹟調停<br>最後一分鐘轉折</div>
+    <div class="scenario-time">時間窗口：4/5—4/6 最後機會</div>
     <div class="scenario-desc">
-      新最高領袖穆傑塔巴選擇強硬立場鞏固正當性，同時中國或俄羅斯介入改變賽局結構。霍爾木茲成為慢性危機，全球能源供應鏈被迫重組，台海局勢受到直接牽連。
+      阿曼或土耳其在最後 24 小時傳遞伊朗「局部讓步」訊號（例如霍爾木茲半開放 + 非正式停火），川普以此作為「贏了」的材料對外宣告勝利。機率極低但不為零——因為雙方都有讓步的隱性需求。
       <br><br>
-      <span style="color:#aaa">觸發條件：</span>穆傑塔巴公開強硬表態＋中俄明確介入訊號
+      <span style="color:#4a8fff">唯一前提：</span>穆傑塔巴私下授權第三方傳遞讓步訊號，且川普願意接受非正式框架
     </div>
   </div>
 </div>
 
-<!-- Row 4: 觀測指標 -->
+<!-- Row 4: 觀測指標（更新版） -->
 <div class="indicators">
-  <div class="card-title" style="margin-bottom:14px"><span class="dot" style="background:#5be095"></span>關鍵觀測指標 — 接下來兩週看這三件事</div>
+  <div class="card-title" style="margin-bottom:14px"><span class="dot" style="background:#ff7070"></span>接下來 48 小時的關鍵觀測點</div>
 
   <div class="indicator-row">
-    <div class="indicator-icon ind-green">↗</div>
+    <div class="indicator-icon ind-red">🔴</div>
     <div class="indicator-text">
-      <div class="indicator-label" style="color:#5be095">B 情境信號（快速退場）</div>
-      第三方（卡達、土耳其、阿曼）出現穿梭外交跡象 ｜ 霍爾木茲有局部開放訊號 ｜ 川普措辭從「obliterating」轉向「historic achievement」
+      <div class="indicator-label" style="color:#ff7070">A 情境升級信號（最高優先）</div>
+      4/6 日出後無任何外交訊號 ｜ 伊朗官媒繼續強硬表態 ｜ 美軍航母戰鬥群調動報告 ｜ 霍爾木茲維持完全封鎖
     </div>
   </div>
   <div class="indicator-row">
-    <div class="indicator-icon ind-red">↘</div>
+    <div class="indicator-icon ind-yellow">⚡</div>
     <div class="indicator-text">
-      <div class="indicator-label" style="color:#ff7070">A 情境信號（繼續打）</div>
-      更多核設施被炸的公告 ｜ 伊朗代理人（黎巴嫩真主黨、葉門胡塞）攻擊頻率上升 ｜ 美軍在波斯灣的兵力繼續增加
+      <div class="indicator-label" style="color:#f0b942">B 情境奇蹟信號（低但要盯）</div>
+      阿曼/土耳其外長開始密集電話外交 ｜ 伊朗外長緊急出訪中立國 ｜ 穆傑塔巴公開發言軟化 ｜ 霍爾木茲有任何半開放動作
     </div>
   </div>
   <div class="indicator-row">
-    <div class="indicator-icon ind-yellow">!</div>
+    <div class="indicator-icon ind-blue">🌐</div>
     <div class="indicator-text">
-      <div class="indicator-label" style="color:#f0b942">C 情境警報（長期拉鋸）</div>
-      穆傑塔巴公開強硬表態鞏固領袖地位 ｜ 中國或俄羅斯明確軍事介入訊號 ｜ 台海異常動態（伊朗若垮台，中國窗口論激活）
+      <div class="indicator-label" style="color:#6b9fff">全球蔓延觀察指標</div>
+      Brent 原油突破 $120 ｜ 中國官方表態 ｜ 台海動態（伊朗若垮台，中國戰略窗口論激活） ｜ 俄羅斯向伊朗軍援訊號
     </div>
   </div>
 </div>
 
-<div class="footnote">KPS Analysis · 2026.03.21 · Yuu (CoS) · 資料截至戰爭第 21 天</div>
+<div class="footnote">KPS Analysis · 2026.04.05 · Yuu (CoS) · 資料截至戰爭第 36 天 · 較 3/21 快照更新</div>
 
 </body>
 </html>
